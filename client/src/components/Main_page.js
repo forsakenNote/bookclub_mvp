@@ -16,6 +16,8 @@ export default function Main_page() {
     bookName: "",
     author: ""
   });
+  const[discussion, setDiscussion] = useState([]);
+  const[reply, setReply] = useState("");
 
 
 
@@ -188,12 +190,14 @@ export default function Main_page() {
 
         <h4>Join the discussion below!</h4>
 
-        <div>
+        <div className="Discussion-comments">
           <DiscussionBoard
-          
+          comments={discussion}
+          comment={reply}
           />
         </div>
         <hr/>
+        
         {/* Comments section:
         added to dynamically when someone writes a comment */}
 
