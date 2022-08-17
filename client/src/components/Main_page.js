@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { useParams } from "react-router-dom";
+import DiscussionBoard from './Discussion_board';
 import { useEffect } from 'react';
 
 
@@ -186,6 +187,12 @@ export default function Main_page() {
                 </section>
 
         <h4>Join the discussion below!</h4>
+
+        <div>
+          <DiscussionBoard
+          
+          />
+        </div>
         <hr/>
         {/* Comments section:
         added to dynamically when someone writes a comment */}
@@ -193,7 +200,7 @@ export default function Main_page() {
 
         {/* Comments form: */}
         {/* Submit button runs function that adds to comments above */}
-        <h4>Add your comments:</h4>
+        {/* <h4>Add your comments:</h4>
         <hr/>
 
             <form>
@@ -202,7 +209,7 @@ export default function Main_page() {
                 <label for="comments">Comments</label>
                 <input type="text" id="comments"/>
                 <button type="submit">Submit</button>
-            </form>
+            </form> */}
 
     </div>
   )
