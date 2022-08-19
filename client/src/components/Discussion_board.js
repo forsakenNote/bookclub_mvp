@@ -9,14 +9,19 @@ export default function CommentSection() {
   const[comments,setComments] = useState([]);
 
   const onClickHandler = () => {
-    setComments((comments) => [...comments, comment, name]);
+    setComments((comments) => [...comments, comment]);
   }
 
 
   const onChangeHandler = (e) => {
     setComment(e.target.value);
+  };
+
+  const onChangeHandler2 = (e) => {
     setName(e.target.value)
   };
+
+
 
     return (
       <div className="discussion-div">
@@ -32,9 +37,8 @@ export default function CommentSection() {
             type="text" 
             id="name"
             value={name}
-            onChange={onChangeHandler}
+            onChange={onChangeHandler2}
             />
-          </form>
 
           <h3 className="comment-text">Comment</h3>
           <textarea
@@ -48,8 +52,8 @@ export default function CommentSection() {
           <button
           onclick={onClickHandler}
           className="comment-button">Submit</button>
-        </div>
-        
+            </form>
+            </div>
       </div>
     )
   }

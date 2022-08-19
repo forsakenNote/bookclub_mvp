@@ -5,6 +5,7 @@ import MainPage from './components/Main_page';
 import AccessForm from './components/Create_form';
 import FindAClub from './components/Find_club';
 import SignIn from './components/Sign_in';
+import DiscussionBoard from './components/Discussion_board';
 import { useNavigate } from 'react-router-dom';
 import { Routes, Route, Link } from "react-router-dom"
 
