@@ -17,10 +17,18 @@ export default function Main_page() {
     author: ""
   });
   const[discussion, setDiscussion] = useState([]);
-  const[reply, setReply] = useState("");
+  console.log("DISCUSSION", discussion);
+  // const[reply, setReply] = useState({
+  //   name: "",
+  //   comment: "",
+  // });
 
+  const addComment = (newComment) => {
+    console.log("NEW COMMENT", newComment);
+    setDiscussion((state) => [...state, newComment]);
+  };
 
-
+  
   /*make a request to the backend to get data based on the club name passed in via the URL
   setBook(data) isn't working
   // useEffect(() => {
@@ -193,7 +201,8 @@ export default function Main_page() {
         <div className="Discussion-comments">
           <DiscussionBoard
           comments={discussion}
-          comment={reply}
+          // nameComment={reply}
+          addComment = { (newComment) => addComment(newComment) }
           />
         </div>
         <hr/>
