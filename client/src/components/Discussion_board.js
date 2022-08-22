@@ -9,7 +9,7 @@ export default function CommentSection({comments, addComment}) {
   const[nameComment, setNameComment] = useState({
     name: "",
     comment: "",
-    // date: new Date().toLocaleTimeString()
+    date: new Date().toLocaleTimeString()
   })
  
 
@@ -59,13 +59,14 @@ const handleChange = (e) => {
           className="comment-container">
             <h4>{text.name} commented:</h4>
           <div></div>
+          <div className="comment-display">
           <h6>{text.comment}</h6>
-          {/* <h2>Posted on {new Date().toLocaleTimeString()}</h2> */}
-          {/* <div>
-            Posted at {text.date}
-          </div> */}
           </div>
-
+          {/* <h2>Posted on {new Date().toLocaleTimeString()}</h2> */}
+          <div>
+            Posted at {text.date}
+          </div>
+          </div>
         ))}
 
         <div className="comment-submit">
