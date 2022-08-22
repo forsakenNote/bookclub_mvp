@@ -185,7 +185,23 @@ row-gap: 15px;
 }
 
 
-.discussion-div {
+.comment-submit {
+  background-color: #f9f4e6;
+  margin: 50px 50px 50px 50px;
+  padding: 40px 75px 40px 75px;
+  border-radius: 50px 50px 50px 50px;
+  max-width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comment-button {
+  margin: 30px 20px 20px 20px;
+}
+
+
+.comment-container {
   background-color: #f9f4e6;
   margin: 50px 50px 50px 50px;
   padding: 40px 75px 40px 75px;

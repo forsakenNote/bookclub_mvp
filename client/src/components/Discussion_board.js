@@ -10,7 +10,7 @@ export default function CommentSection({comments, addComment}) {
   const[nameComment, setNameComment] = useState({
     name: "",
     comment: "",
-    date: new Date().toLocaleTimeString()
+    // date: new Date().toLocaleTimeString()
   })
 
   console.log(comments);
@@ -56,13 +56,14 @@ const handleChange = (e) => {
         {comments.map((text) => (
           <div
           key={text.index}
-          className="comment-container">{text.name}
+          className="comment-container">
+            <h4>{text.name} commented:</h4>
           <div></div>
-          {text.comment}
+          <h6>{text.comment}</h6>
           {/* <h2>Posted on {new Date().toLocaleTimeString()}</h2> */}
-          <div>
-            {text.date}
-          </div>
+          {/* <div>
+            Posted at {text.date}
+          </div> */}
           </div>
 
         ))}
@@ -77,6 +78,7 @@ const handleChange = (e) => {
             <input 
             type="text" 
             id="name"
+            placeholder="Your name"
             value={nameComment.name}
             name="name"
             onChange={handleChange}
@@ -84,6 +86,7 @@ const handleChange = (e) => {
 
             <h3 className="comment-text">Comment</h3>
             <textarea
+            placeholder="Comment here..."
             value={nameComment.comment}
             name="comment"
             onChange={handleChange}
@@ -93,7 +96,7 @@ const handleChange = (e) => {
             </div>
             
             <button
-            className="comment-button">Submit</button>
+            className="change-book-button btn btn-dark btn-s">Submit</button>
           </form>
         </div>
       </div>
