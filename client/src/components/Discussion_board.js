@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 
 export default function CommentSection({comments, addComment}) {
@@ -12,6 +11,7 @@ export default function CommentSection({comments, addComment}) {
     comment: "",
     // date: new Date().toLocaleTimeString()
   })
+ 
 
   console.log(comments);
   console.log("NAMECOMMENT", nameComment);
@@ -74,7 +74,7 @@ const handleChange = (e) => {
           onSubmit={handleSubmit}
           >
 
-            <label htmlFor="name">Name</label>
+            <h5><label htmlFor="name">Name</label></h5>
             <input 
             type="text" 
             id="name"
@@ -84,7 +84,7 @@ const handleChange = (e) => {
             onChange={handleChange}
             />
 
-            <h3 className="comment-text">Comment</h3>
+            <h5 className="comment-text">Comment</h5>
             <textarea
             placeholder="Comment here..."
             value={nameComment.comment}
