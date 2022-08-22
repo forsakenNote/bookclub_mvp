@@ -183,3 +183,15 @@ row-gap: 15px;
     flex-direction: column;
     row-gap: 15px;
 }
+
+
+.discussion-div {
+  background-color: #f9f4e6;
+  margin: 50px 50px 50px 50px;
+  padding: 40px 75px 40px 75px;
+  border-radius: 50px 50px 50px 50px;
+  max-width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
